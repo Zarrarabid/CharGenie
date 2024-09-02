@@ -50,7 +50,7 @@
   }
 /* ---------------------------------------- */
 
-.button2 {
+.button2,.btnonBG {
     display: inline-block;
     transition: all 0.2s ease-in;
     position: relative;

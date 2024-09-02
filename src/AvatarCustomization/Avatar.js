@@ -2,11 +2,11 @@ import React from 'react'
 import AvatarImage from "../assets/character-images-left-side/default/basic-character.png"
 import { SelectedStyle } from '../Store/StateManagement'
 function Avatar() {
-    const maintainView = SelectedStyle((state) => state.maintainView)
+    let maintainView = SelectedStyle((state) => state.maintainView)
     return (
         <div style={{ width: "500px", height: "500px", position: "relative" }}>
             <img style={{ width: "500px", height: "500px" }} src={AvatarImage} alt="sample" />
-            {maintainView?.map((item, index) => {
+            {maintainView?.filter((ele) => ele?.category !== "Background")?.map((item, index) => {
                 return (
                     <img key={index}
                         style={{

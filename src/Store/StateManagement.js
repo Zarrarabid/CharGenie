@@ -195,7 +195,31 @@ const RenderSvgs = () => {
                 leftSideSvg: leftsidemouth6,
                 rightSideSvg: mouth6
             }],
-        // Background: [bac, hair2, hair3, hair4, hair5, hair6],
+        Background: [
+            {
+                leftSideSvg: "#FF8A8A",
+                rightSideSvg: "#FF8A8A"
+            },
+            {
+                leftSideSvg: "#D1E9F6",
+                rightSideSvg: "#D1E9F6"
+            },
+            {
+                leftSideSvg: "#987D9A",
+                rightSideSvg: "#987D9A"
+            },
+            {
+                leftSideSvg: "#FFE9D0",
+                rightSideSvg: "#FFE9D0"
+            },
+            {
+                leftSideSvg: "#91DDCF",
+                rightSideSvg: "#91DDCF"
+            },
+            {
+                leftSideSvg: "#B5C0D0",
+                rightSideSvg: "#B5C0D0"
+            }],
         Accessories: [
             {
                 leftSideSvg: leftsideaccessory1,
@@ -219,20 +243,72 @@ const RenderSvgs = () => {
             }],
     }]
 }
-const handleMaintainView = (value) => {
-    return value
-}
+// const handleRandomize = (value) => {
+//     const randomNumber = Math.floor(Math.random() * 5) + 1;
+//     let randomized = [
+//         {
+//             category: "Hair",
+//             selectedSvg: leftsidehair1
+//         },
+//         {
+//             category: "Eyes",
+//             selectedSvg: leftsideeyes1
+//         },
+//         {
+//             category: "Ears",
+//             selectedSvg: leftsideears1
+//         },
+//         {
+//             category: "Nose",
+//             selectedSvg: leftsidenose1
+//         },
+//         {
+//             category: "Mouth",
+//             selectedSvg: leftsidemouth1
+//         },
+//         {
+//             category: "Accessories",
+//             selectedSvg: leftsideaccessory1
+//         },
+//     ]
+// }
 
 const SelectedStyle = create((set) => ({
     selectedOption: "",
     styleOptions: ["Hair", "Eyes", "Ears", "Nose", "Mouth", "Background", "Accessories"],
     renderSvgs: [],
-    customizeImage: "",
-    maintainView: [],
+    customizebg: "#FF8A8A",
+    maintainView: [
+        {
+            category: "Hair",
+            selectedSvg: leftsidehair1
+        },
+        {
+            category: "Eyes",
+            selectedSvg: leftsideeyes1
+        },
+        {
+            category: "Ears",
+            selectedSvg: leftsideears1
+        },
+        {
+            category: "Nose",
+            selectedSvg: leftsidenose1
+        },
+        {
+            category: "Mouth",
+            selectedSvg: leftsidemouth1
+        },
+        {
+            category: "Accessories",
+            selectedSvg: leftsideaccessory1
+        },
+    ],
     setSelectedOption: (option) => set(() => ({ selectedOption: option })),
     setRenderOption: () => set(() => ({ renderSvgs: RenderSvgs() })),
-    setCustomizeImage: (image) => set(() => ({ customizeImage: image })),
-    setMaintainView: (value) => set(() => ({ maintainView: handleMaintainView(value) }))
+    setCustomizebg: (image) => set(() => ({ customizebg: image })),
+    setMaintainView: (value) => set(() => ({ maintainView: value })),
+    // setRandomView: (value) => set(() => ({ maintainView: handleRandomize(value) }))
 }))
 
 export {

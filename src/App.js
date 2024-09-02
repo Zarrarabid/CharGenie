@@ -8,6 +8,7 @@ import downloadjs from 'downloadjs';
 
 function App() {
   const selectedOption = SelectedStyle((state) => state.selectedOption)
+  let customizebg = SelectedStyle((state) => state.customizebg)
 
   const handleCaptureClick = async () => {
     const pricingTableElmt =
@@ -28,7 +29,7 @@ function App() {
           <Avatar />
         </div> */}
         <div className='col-md-6'>
-          <div style={{ backgroundColor: "whitesmoke" }} className='Character_div col-md-12 px-0 d-flex justify-content-center'>
+          <div style={{ backgroundColor: selectedOption === "Background" ? customizebg?.leftSideSvg : "whitesmoke" }} className='Character_div col-md-12 px-0 d-flex justify-content-center'>
             <Avatar />
           </div>
           <div className='col-6'>
