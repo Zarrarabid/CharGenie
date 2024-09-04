@@ -9,7 +9,7 @@ function Category() {
     const setMaintainView = SelectedStyle((state) => state.setMaintainView)
     const maintainView = SelectedStyle((state) => state.maintainView)
     return (
-        <div className='row flex-wrap'>
+        <div className='row flex-wrap animate__animated animate__backInUp'>
             {renderSvgs[0]?.[selectedOption]?.map((item, index) => {
                 return (
                     // <button key={index}
