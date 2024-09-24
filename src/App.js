@@ -22,48 +22,50 @@ function App() {
 
   return (
     <>
-      <div className="bg"></div>
-      <div className="bg bg2"></div>
-      <div className="bg bg3"></div>
-      <main className='col-12 p-5 container'>
-        <div >
-          <b>CHARACTER GENERATOR</b>
-        </div>
-        <div className='row' >
-          <div className='col-md-6'>
-            <div
-              style={{
-                backgroundColor: maintainView?.filter((ele) => ele?.category === "Background")?.length > 0 ?
-                  maintainView?.filter((ele) => ele?.category === "Background")[0]?.selectedSvg : "whitesmoke"
-              }}
-              className='Character_div col-md-12 px-0 d-flex justify-content-center'>
-              <Avatar />
+      <div className='col-12 px-0'>
+        <div className="bg"></div>
+        <div className="bg bg2"></div>
+        <div className="bg bg3"></div>
+        <div className='col-12 p-5 container'>
+          <div >
+            <b>CHARACTER GENERATOR</b>
+          </div>
+          <div className='row' >
+            <div className='col-lg-6 col-md-12 col-sm-12 '>
+              <div
+                style={{
+                  backgroundColor: maintainView?.filter((ele) => ele?.category === "Background")?.length > 0 ?
+                    maintainView?.filter((ele) => ele?.category === "Background")[0]?.selectedSvg : "whitesmoke"
+                }}
+                className='Character_div col-md-12 col-sm-12 col-12 px-0 d-flex justify-content-center'>
+                <Avatar />
+              </div>
+              <div className='col-12 mt-2 d-flex justify-content-between'>
+                <button className='OptionBtn rounded-5' onClick={() => handleCaptureClick()}>download</button>
+                <button className='OptionBtn rounded-5' onClick={() => {
+                  setRandomView()
+                }}>random</button>
+              </div>
             </div>
-            <div className='col-6 mt-2 d-flex justify-content-between'>
-              <button className='OptionBtn rounded-5' onClick={() => handleCaptureClick()}>download</button>
-              <button className='OptionBtn rounded-5' onClick={() => {
-                setRandomView()
-              }}>random</button>
+            <div className='col-lg-6 col-md-12 col-sm-12'>
+              <div className='row'>
+                <div className='col-md-12'>
+                  <b>Customize Look</b>
+                </div>
+                <div className='col-md-12 mt-2'>
+                  <Button />
+                </div>
+                <div className='col-md-12 mt-3'>
+                  <b>{selectedOption}</b>
+                </div>
+                {selectedOption !== "" && <div className='col-md-12 mt-2'>
+                  <Category />
+                </div>}
+              </div>
             </div>
           </div>
-          <div className='col-md-6'>
-            <div className='row'>
-              <div className='col-md-12'>
-                <b>Customize Look</b>
-              </div>
-              <div className='col-md-12 mt-2'>
-                <Button />
-              </div>
-              <div className='col-md-12 mt-3'>
-                <b>{selectedOption}</b>
-              </div>
-              {selectedOption !== "" && <div className='col-md-12 mt-2'>
-                <Category />
-              </div>}
-            </div>
-          </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }

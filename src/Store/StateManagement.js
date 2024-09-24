@@ -420,7 +420,10 @@ const RenderSvgs = () => {
 const handleRandomize = () => {
     let randomNumber = Math.floor(Math.random() * 5) + 1;
     if (random === randomNumber) {
-        randomNumber++
+        if (randomNumber === 5) return
+        else {
+            randomNumber++
+        }
     }
     random = randomNumber < 5 ? randomNumber : randomNumber - 1
     console.log(RenderSvgsArr[0], "test----", randomNumber)
