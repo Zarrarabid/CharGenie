@@ -8,6 +8,8 @@ function Category() {
     const setCustomizebg = SelectedStyle((state) => state.setCustomizebg)
     const setMaintainView = SelectedStyle((state) => state.setMaintainView)
     const maintainView = SelectedStyle((state) => state.maintainView)
+    let screen = SelectedStyle((state) => state.screen)
+
     return (
         <div className='row flex-wrap animate__animated animate__backInUp'>
             {renderSvgs[0]?.[selectedOption]?.map((item, index) => {
@@ -58,9 +60,10 @@ function Category() {
                         }}
                         style={{
                             height: selectedOption === "Background" ? "120px" : "",
-                            backgroundColor: selectedOption === "Background" ? item?.leftSideSvg : ""
+                            backgroundColor: selectedOption === "Background" ? item?.leftSideSvg : "",
+                            justifyContent: screen <= 767 ? "center" : ""
                         }}
-                        className={selectedOption === "Background" ? "d-flex justify-content-center m-2 btnonBG col-md-2" : 'd-flex justify-content-center m-2 button2 col-md-2'}>
+                        className={selectedOption === "Background" ? "d-flex justify-content-center m-3 btnonBG col-md-3" : 'd-flex justify-content-center m-3 button2 col-md-3'}>
                         {selectedOption !== "Background" &&
                             <img className='px-2' style={{ width: "100%", height: "120px" }} src={item?.rightSideSvg} alt={`svg${index}`} />}
                     </div>

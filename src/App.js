@@ -5,11 +5,14 @@ import Category from './Categories/Category';
 import { SelectedStyle } from './Store/StateManagement';
 import html2canvas from 'html2canvas'
 import downloadjs from 'downloadjs';
+import { useEffect } from 'react';
 
 function App() {
   const selectedOption = SelectedStyle((state) => state.selectedOption)
   let setRandomView = SelectedStyle((state) => state.setRandomView)
   let maintainView = SelectedStyle((state) => state.maintainView)
+  let setScreen = SelectedStyle((state) => state.setScreen)
+  let screen = SelectedStyle((state) => state.screen)
 
   const handleCaptureClick = async () => {
     const pricingTableElmt =
@@ -19,6 +22,20 @@ function App() {
     const dataURL = canvas.toDataURL('image/png');
     downloadjs(dataURL, 'avatar.png', 'image/png');
   };
+
+  useEffect(() => {
+    const handleScreenSize = () => {
+      setScreen(window?.outerWidth)
+    }
+    window.addEventListener("resize", handleScreenSize)
+
+    handleScreenSize()
+
+    return () => {
+      window.removeEventListener("resize", handleScreenSize)
+    }
+
+  }, [])
 
   return (
     <>
@@ -40,9 +57,9 @@ function App() {
                 className='Character_div col-md-12 col-sm-12 col-12 px-0 d-flex justify-content-center'>
                 <Avatar />
               </div>
-              <div className='col-12 mt-2 d-flex justify-content-between'>
-                <button className='OptionBtn rounded-5' onClick={() => handleCaptureClick()}>download</button>
-                <button className='OptionBtn rounded-5' onClick={() => {
+              <div className={screen <= 575 ? "col-12 mt-2 d-flex flex-column justify-content-between" : 'col-12 mt-2 d-flex justify-content-between'}>
+                <button className={screen <= 575 ? "OptionBtn rounded-5 col-md-3 col-sm-3 mb-3 col-12" : 'OptionBtn rounded-5 col-md-3 col-sm-3 col-12'} onClick={() => handleCaptureClick()}>download</button>
+                <button className='OptionBtn rounded-5 col-md-3 col-sm-3 col-12' onClick={() => {
                   setRandomView()
                 }}>random</button>
               </div>
