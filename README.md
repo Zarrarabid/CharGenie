@@ -33,10 +33,8 @@
 - [ Learning and Implementation of Zustand](#-Learning-and-Implementation-of-Zustand)
 - [ Repository Structure](#-repository-structure)
 - [ Getting Started](#-getting-started)
-    - [ Prerequisites](#-prerequisites)
     - [ Installation](#-installation)
     - [ Usage](#-usage)
-    - [ Tests](#-tests)
 - [ Contributing](#-contributing)
 - [ Acknowledgments](#-acknowledgments)
 
@@ -50,13 +48,13 @@
 
 ##  Features
 
-<code>
-Customization Options: Choose from diverse hairstyles, facial features, hairstyles, background, and accessories. Random Generation: Create unexpected characters with a single tap. Save and Share: Keep your favorite designs and share them with friends. Regular Updates: Enjoy new features and options with ongoing updates.</code>
+
+Customization Options: Choose from diverse hairstyles, facial features, hairstyles, background, and accessories. Random Generation: Create unexpected characters with a single tap. Save and Share: Keep your favorite designs and share them with friends. Regular Updates: Enjoy new features and options with ongoing updates.
 
 ---
 ##  Learning and Implementation of Zustand
 
-<code>This project marks my first experience with Zustand for state management. Diving into its concepts and functionality has been a valuable learning journey, enhancing my understanding of managing application state effectively. Implementing Zustand has significantly improved the performance and maintainability of the Character Generator App.</code>
+This project marks my first experience with Zustand for state management. Diving into its concepts and functionality has been a valuable learning journey, enhancing my understanding of managing application state effectively. Implementing Zustand has significantly improved the performance and maintainability of the Character Generator App.
 
 ---
 
