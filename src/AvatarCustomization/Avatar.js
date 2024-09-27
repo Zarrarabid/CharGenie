@@ -2,22 +2,23 @@ import React from 'react'
 import AvatarImage from "../assets/character-images-left-side/default/basic-character.png"
 import { SelectedStyle } from '../Store/StateManagement'
 function Avatar() {
-    const maintainView = SelectedStyle((state) => state.maintainView)
+    let maintainView = SelectedStyle((state) => state.maintainView)
     return (
-        <div style={{ width: "500px", height: "500px", position: "relative" }}>
-            <img style={{ width: "500px", height: "500px" }} src={AvatarImage} alt="sample" />
-            {maintainView?.map((item, index) => {
+        <div style={{ width: "inherit", height: "inherit", position: "relative" }}>
+            <img style={{ width: "inherit", height: "inherit" }} src={AvatarImage} alt="sample" />
+            {maintainView?.filter((ele) => ele?.category !== "Background")?.map((item, index) => {
                 return (
                     <img key={index}
+                        className='animate__animated animate__fadeIn'
                         style={{
-                            width: "500px",
-                            height: "500px",
+                            width: "inherit",
+                            height: "inherit",
                             position: "absolute",
                             left: "0px",
                             right: "0px",
-                            zIndex: item?.category === "Accessories" ? "2" : "1",
+                            zIndex: item?.category === "Accessories" || item?.category === "Ears" ? "2" : "1",
                         }}
-                        src={item?.selectedSvg} alt={`Svg${index}`} />
+                        src={item?.selectedSvg} alt='test' />
                 )
             })
             }
