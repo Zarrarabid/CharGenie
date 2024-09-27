@@ -1,8 +1,8 @@
 import './App.css';
-import Avatar from './AvatarCustomization/Avatar';
-import Button from './Buttons/Button';
-import Category from './Categories/Category';
-import { SelectedStyle } from './Store/StateManagement';
+import Avatar from './components/AvatarCustomization/Avatar';
+import Button from './components/Buttons/Button';
+import Category from './components/Categories/Category';
+import { SelectedStyle } from './components/Store/StateManagement';
 import html2canvas from 'html2canvas'
 import downloadjs from 'downloadjs';
 import { useEffect } from 'react';
