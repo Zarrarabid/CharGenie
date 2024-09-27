@@ -11,7 +11,8 @@
 	<img src="https://img.shields.io/github/license/Zarrarabid/CharGenie?style=flat&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/Zarrarabid/CharGenie?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/Zarrarabid/CharGenie?style=flat&color=0080ff" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/Zarrarabid/CharGenie?style=flat&color=0080ff" alt="repo-language-count">
+	<img src="https://img.shields.io/badge/https%3A%2F%2Fimg.shields.io%2Fbadge%2FZustand-000000%3Fstyle%3Dflat" alt="repo-language-count">
+)
 </p>
 <p align="center">
 		<em>Built with the tools and technologies:</em>
