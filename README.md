@@ -42,7 +42,7 @@
 
 ##  Overview
 
-<code>The Character Generator App is your ultimate tool for crafting unique characters tailored to your imagination. With extensive customization options, users can select from various hairstyles, facial features, background, and accessories. The app also includes a random generation feature for spontaneous character ideas. Save your creations in a personal library and easily share them with friends. Regular updates ensure fresh content, making character creation an exciting and ongoing adventure. Start designing your perfect character today!</code>
+The Character Generator App is your ultimate tool for crafting unique characters tailored to your imagination. With extensive customization options, users can select from various hairstyles, facial features, background, and accessories. The app also includes a random generation feature for spontaneous character ideas. Save your creations in a personal library and easily share them with friends. Regular updates ensure fresh content, making character creation an exciting and ongoing adventure. Start designing your perfect character today!
 
 ---
 
