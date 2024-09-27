@@ -5,14 +5,13 @@
     <h1 align="center">CHARGENIE</h1>
 </p>
 <p align="center">
-    <em><code>❯A Character Generator App</code></em>
+    <em><code>A Character Generator App</code></em>
 </p>
 <p align="center">
 	<img src="https://img.shields.io/github/license/Zarrarabid/CharGenie?style=flat&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/Zarrarabid/CharGenie?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/Zarrarabid/CharGenie?style=flat&color=0080ff" alt="repo-top-language">
-	<img src="https://img.shields.io/badge/https%3A%2F%2Fimg.shields.io%2Fbadge%2FZustand-000000%3Fstyle%3Dflat" alt="repo-language-count">
-)
+	<img src="https://img.shields.io/github/languages/count/Zarrarabid/CharGenie?style=flat&color=0080ff" alt="repo-language-count">
 </p>
 <p align="center">
 		<em>Built with the tools and technologies:</em>
@@ -31,16 +30,14 @@
 
 - [ Overview](#-overview)
 - [ Features](#-features)
+- [ Learning and Implementation of Zustand](#-Learning-and-Implementation-of-Zustand)
 - [ Repository Structure](#-repository-structure)
-- [ Modules](#-modules)
 - [ Getting Started](#-getting-started)
     - [ Prerequisites](#-prerequisites)
     - [ Installation](#-installation)
     - [ Usage](#-usage)
     - [ Tests](#-tests)
-- [ Project Roadmap](#-project-roadmap)
 - [ Contributing](#-contributing)
-- [ License](#-license)
 - [ Acknowledgments](#-acknowledgments)
 
 ---
@@ -53,11 +50,13 @@
 
 ##  Features
 
-<code>Features
-Customization Options: Choose from diverse hairstyles, facial features, hairstyles, background, and accessories.
-Random Generation: Create unexpected characters with a single tap.
-Save and Share: Keep your favorite designs and share them with friends.
-Regular Updates: Enjoy new features and options with ongoing updates.</code>
+<code>
+Customization Options: Choose from diverse hairstyles, facial features, hairstyles, background, and accessories. Random Generation: Create unexpected characters with a single tap. Save and Share: Keep your favorite designs and share them with friends. Regular Updates: Enjoy new features and options with ongoing updates.</code>
+
+---
+##  Learning and Implementation of Zustand
+
+<code>This project marks my first experience with Zustand for state management. Diving into its concepts and functionality has been a valuable learning journey, enhancing my understanding of managing application state effectively. Implementing Zustand has significantly improved the performance and maintainability of the Character Generator App.</code>
 
 ---
 
