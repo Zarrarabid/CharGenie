@@ -8,37 +8,12 @@ function Category() {
     const setCustomizebg = SelectedStyle((state) => state.setCustomizebg)
     const setMaintainView = SelectedStyle((state) => state.setMaintainView)
     const maintainView = SelectedStyle((state) => state.maintainView)
-    let screen = SelectedStyle((state) => state.screen)
+    const screen = SelectedStyle((state) => state.screen)
 
     return (
-        <div className='row flex-wrap animate__animated animate__backInUp'>
+        <div style={{ justifyContent: screen <= 767 ? "center" : "" }} className='row flex-wrap animate__animated animate__backInUp'>
             {renderSvgs[0]?.[selectedOption]?.map((item, index) => {
                 return (
-                    // <button key={index}
-                    //     onClick={() => {
-                    //         setCustomizebg(item)
-                    //         if (maintainView?.length > 0) {
-                    //             let filterArr = maintainView?.filter((item) => item?.category !== selectedOption)
-                    //             let obj = {
-                    //                 category: selectedOption,
-                    //                 selectedSvg: item?.leftSideSvg
-                    //             }
-                    //             setMaintainView([...filterArr, obj])
-                    //         }
-                    //         else {
-                    //             let obj = [{
-                    //                 category: selectedOption,
-                    //                 selectedSvg: item?.leftSideSvg
-                    //             }]
-                    //             setMaintainView(obj)
-                    //         }
-                    //     }}
-                    //     class="Btn mx-2 col-md-4">
-                    //     <span class="svgContainer">
-                    //         <img style={{ width: "inherit", height: "inherit" }} src={item?.rightSideSvg} alt={`svg${index}`} />
-                    //     </span>
-                    //     <span class="BG"></span>
-                    // </button>
                     <div key={index}
                         onClick={() => {
                             setCustomizebg(item)
@@ -61,7 +36,6 @@ function Category() {
                         style={{
                             height: selectedOption === "Background" ? "120px" : "",
                             backgroundColor: selectedOption === "Background" ? item?.leftSideSvg : "",
-                            justifyContent: screen <= 767 ? "center" : ""
                         }}
                         className={selectedOption === "Background" ? "d-flex justify-content-center m-3 btnonBG col-md-3" : 'd-flex justify-content-center m-3 button2 col-md-3'}>
                         {selectedOption !== "Background" &&
