@@ -6,9 +6,10 @@ function Button() {
     const selectedVal = SelectedStyle((state) => state.selectedOption)
     const setRenderOption = SelectedStyle((state) => state.setRenderOption)
     const styleOptions = SelectedStyle((state) => state.styleOptions)
+    const screen = SelectedStyle((state) => state.screen)
 
     return (
-        <div className='d-flex flex-wrap gap-3'>
+        <div style={{ justifyContent: screen <= 767 ? "center" : "" }} className='d-flex flex-wrap gap-3'>
             {styleOptions?.map((item, index) => {
                 return (
                     <button
